@@ -2,7 +2,7 @@
 A loader to replace dnSpy shell extension and open x86 files with dnSpy-x86 and x64 files with dnSpy
 
 
-![](https://i.imgur.com/kLKfalG.gif)
+![](https://i.imgur.com/ior44Iq.gif)
 
 # Instructions
 - Disable dnSpy in-built Explorer Integration (Debug -> Options [like this](https://i.imgur.com/5n4Y7uQ.png) )
