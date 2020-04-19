@@ -1,5 +1,4 @@
-﻿using dnlib.DotNet;
-using System;
+﻿using System;
 using System.Diagnostics;
 using System.Reflection;
 using System.Text.RegularExpressions;
@@ -34,8 +33,7 @@ namespace dnSpy.Loader
         }
 
         private void BackgroundWorker1_DoWork(object sender, System.ComponentModel.DoWorkEventArgs e) {
-            ModuleDefMD mod = ModuleDefMD.Load(myFilePath);
-            Assembly asm = Assembly.LoadFile(mod.Location);
+            Assembly asm = Assembly.LoadFile(dnlibWrapper.GetModuleLocation(myFilePath));
 
             asm.ManifestModule.GetPEKind(out PortableExecutableKinds peKind, out ImageFileMachine machine);
 
