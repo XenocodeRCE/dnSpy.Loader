@@ -57,7 +57,7 @@ namespace dnSpy.Loader
                 filePath = $"{currentDirectory}\\dnSpy-x86.exe";
             }
             //x64
-            else if (peKind == PortableExecutableKinds.PE32Plus && machine == ImageFileMachine.AMD64) {
+            else if ((peKind == PortableExecutableKinds.PE32Plus || peKind == (PortableExecutableKinds.PE32Plus | PortableExecutableKinds.ILOnly))  && machine == ImageFileMachine.AMD64) {
                 filePath = $"{currentDirectory}\\dnSpy.exe";
             } else {
                 throw new Exception("Unknown PE value !");
